@@ -186,10 +186,25 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'ChainWeb',
               path: 'ChainWeb',
               builder: (context, params) => ChainWebWidget(),
+            ),
+            FFRoute(
+              name: 'token1',
+              path: 'token1',
+              builder: (context, params) => Token1Widget(),
+            ),
+            FFRoute(
+              name: 'McxtAI',
+              path: 'mcxtAI',
+              builder: (context, params) => McxtAIWidget(),
+            ),
+            FFRoute(
+              name: 'MovieMarathon',
+              path: 'movieMarathon',
+              builder: (context, params) => MovieMarathonWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
-        ).toRoute(appStateNotifier),
-      ],
+        ),
+      ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,
     );
 
@@ -235,6 +250,16 @@ extension NavigationExtensions on BuildContext {
               queryParams: queryParams,
               extra: extra,
             );
+
+  void safePop() {
+    // If there is only one route on the stack, navigate to the initial
+    // page instead of popping.
+    if (GoRouter.of(this).routerDelegate.matches.length <= 1) {
+      go('/');
+    } else {
+      pop();
+    }
+  }
 }
 
 extension GoRouterExtensions on GoRouter {

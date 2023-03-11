@@ -69,7 +69,7 @@ class _AppsAllWidgetState extends State<AppsAllWidget> {
                 },
               ),
               title: Text(
-                'Install using your  Code',
+                'Try our Apps',
                 style: FlutterFlowTheme.of(context).title2.override(
                       fontFamily: FlutterFlowTheme.of(context).title2Family,
                       color: FlutterFlowTheme.of(context).primaryText,
@@ -81,7 +81,7 @@ class _AppsAllWidgetState extends State<AppsAllWidget> {
               actions: [],
               centerTitle: false,
               toolbarHeight: 75.0,
-              elevation: 2.0,
+              elevation: 0.0,
             )
           : null,
       body: SafeArea(
@@ -217,9 +217,9 @@ class _AppsAllWidgetState extends State<AppsAllWidget> {
                                                           MainAxisSize.max,
                                                       children: [
                                                         FFButtonWidget(
-                                                          onPressed: () {
-                                                            print(
-                                                                'Button pressed ...');
+                                                          onPressed: () async {
+                                                            context.pushNamed(
+                                                                'MovieMarathon');
                                                           },
                                                           text: 'Download',
                                                           options:
@@ -376,7 +376,7 @@ class _AppsAllWidgetState extends State<AppsAllWidget> {
                                                               .start,
                                                       children: [
                                                         Text(
-                                                          'Mcxt Mux\nMusic App',
+                                                          'Bibo Mcxt',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyText1
@@ -412,10 +412,10 @@ class _AppsAllWidgetState extends State<AppsAllWidget> {
                                                                     .circular(
                                                                         8.0),
                                                             child: Image.asset(
-                                                              'assets/images/unnamed_(1).png',
+                                                              'assets/images/3891542.png',
                                                               width: 50.0,
                                                               height: 50.0,
-                                                              fit: BoxFit.fill,
+                                                              fit: BoxFit.cover,
                                                             ),
                                                           ),
                                                         ),
@@ -426,9 +426,9 @@ class _AppsAllWidgetState extends State<AppsAllWidget> {
                                                           MainAxisSize.max,
                                                       children: [
                                                         FFButtonWidget(
-                                                          onPressed: () {
-                                                            print(
-                                                                'Button pressed ...');
+                                                          onPressed: () async {
+                                                            context.pushNamed(
+                                                                'McxtAI');
                                                           },
                                                           text: 'Download',
                                                           options:
@@ -502,7 +502,7 @@ class _AppsAllWidgetState extends State<AppsAllWidget> {
                                                       BorderRadius.circular(
                                                           8.0),
                                                   child: Image.asset(
-                                                    'assets/images/mobile_(4).png',
+                                                    'assets/images/mobile_(3).png',
                                                     width: 120.1,
                                                     height: 210.3,
                                                     fit: BoxFit.contain,
@@ -534,10 +534,7 @@ class _AppsAllWidgetState extends State<AppsAllWidget> {
                       Container(
                         width: double.infinity,
                         height: 80.0,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                        ),
+                        decoration: BoxDecoration(),
                         child: wrapWithModel(
                           model: _model.mobileNavModel,
                           updateCallback: () => setState(() {}),

@@ -21,3 +21,6 @@ export '/notifications/notifications_widget.dart' show NotificationsWidget;
 export '/connect_wallet/connect_wallet_widget.dart' show ConnectWalletWidget;
 export '/chainlist/chainlist_widget.dart' show ChainlistWidget;
 export '/chain_web/chain_web_widget.dart' show ChainWebWidget;
+export '/token1/token1_widget.dart' show Token1Widget;
+export '/mcxt_a_i/mcxt_a_i_widget.dart' show McxtAIWidget;
+export '/movie_marathon/movie_marathon_widget.dart' show MovieMarathonWidget;

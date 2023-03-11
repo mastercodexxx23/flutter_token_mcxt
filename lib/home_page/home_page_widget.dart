@@ -345,7 +345,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                                                                                   child: InkWell(
                                                                                     onTap: () async {
-                                                                                      context.pushNamed('ConnectWallet');
+                                                                                      context.pushNamed('token1');
                                                                                     },
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
